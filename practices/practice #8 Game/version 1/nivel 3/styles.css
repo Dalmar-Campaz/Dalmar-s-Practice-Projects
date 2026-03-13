@@ -1,0 +1,65 @@
+body {
+  background-color: black;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100%;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+}
+canvas {
+  border: 2px solid  grey;
+  background-color: greenyellow;
+  display: block;
+  position: relative;
+}
+.flex-r {
+  display: flex;
+  flex-direction: row;
+}
+.change-menu {
+  width: 200px;
+  height: 400px;
+  position: absolute;
+  right: 100px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  border: 2px solid white;
+  padding: 20px;
+}
+.players {
+  font-size: 36px;
+  color: white;
+  font-weight: 700;
+  margin: 20px 0;
+}
+.selector {
+  width: 100%;
+  display: flex;
+  color: white;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 40px;
+}
+#p1, #p2 {
+  width: 100%;
+  text-align: center;
+  font-size: 22px;
+  font-weight: 600;
+}
+.selector div:nth-child(1){
+  width: 40px;
+  height: 40px;
+  background: white;
+  clip-path: polygon(0% 50%, 100% 0%, 100% 100%);
+}
+.selector div{
+  width: 40px;
+  cursor: pointer;
+  height: 40px;
+  background-color: white;
+  clip-path: polygon(0% 0%, 100% 50%, 0% 100%);
+}
