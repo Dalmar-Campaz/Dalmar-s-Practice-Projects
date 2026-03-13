@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>FEAC Studio | Solicitud</title>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+        <!--titulo-->
+        <div class="container">
+            <header>
+                <h1 id="title">Solicitud De Ingreso</h1>
+                <p id="description">¡Llena el siguiente formulario para hacer una solicitud!</p>
+            </header>
+        <form action="" id="survey-form">
+            <fieldset class="f1">
+                <label id="name-label" for="name">Nombre: <input name="Nombre" required placeholder=" Ingrese su nombre" id="name" type="text"></label>
+                <label for="last-name">Apellido: <input required placeholder=" Ingrese su apellido" type="text" id="last-name"></label>
+                <label id="email-label" for="email">Correo Electronico: <input name="email" required placeholder=" Ingrese su correo electronico" id="email" type="email"></label>
+                <label id="number-label" for="number">Edad: <input min="17" max="60" name="Edad" required placeholder=" Ingrese su edad" id="number" type="number"></label>
+                   
+            </fieldset>
+        <!--segunda seccion-->
+            <fieldset class="f1"> 
+                <label for="dropdown">En una escala del 1 al 10 (siendo 1 el mas bajo y 10 el mas alto) 
+                    ¿Que tan familiarizado esta con la programacion?
+                    <select required name="skill-level" id="dropdown">
+                        <option value=""><h2>- Seleccione un numero -</h2></option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                        <option value="10">10</option>
+                    </select>
+                </label>   
+        <!--checkboxes-->
+                <h2>¿De cual de las siguientes areas tiene conocimiento?</h2>
+                <div>
+                <label for="Frontend"><input id="Frontend" name="Frontend" value="Frontend" type="checkbox"> Desarrollo de Frontend</label> 
+                <label for="Backend"><input id="Backend" name="Backend" value="Backend" type="checkbox"> Desarrollo de Backend</label> 
+                <label for="Apps"><input id="Apps" name="Apps" value="Apps" type="checkbox"> Desarrollo de Apps</label> 
+                <label for="DevOps"><input id="DevOps" name="DevOps" value="DevOps" type="checkbox"> Ingenieria de DevOps</label>
+                <label for="Diseño"><input name="Diseño" id="Diseño" value="Diseño" type="checkbox"> Diseño Grafico</label> 
+                </div>
+                <div>
+                <h2>¿Conoce algun proyecto de FEAC Studio?</h2>
+                <label for="si"><input value="si" checked name="YN" id="si" type="radio"> Si</label>
+                <label for="no"><input value="no" name="YN" id="No" type="radio"> No</label>
+                </div>
+            </fieldset>
+            <!--tercera seccion-->
+            <fieldset class="f1">
+                <label for="bio"> ¿Como escuchastes de nosotros? <textarea required placeholder="Por medio de las redes sociales..." cols="30" rows="7" style="display: block;" id="bio" name="bio" type="textarea"></textarea></label>
+            </fieldset>
+        <!--boton submit-->
+            <label for="submit"><input id="submit" type="submit"></label>
+        </form>
+        </div>
+    </body>
+    <footer></footer>
+</html>

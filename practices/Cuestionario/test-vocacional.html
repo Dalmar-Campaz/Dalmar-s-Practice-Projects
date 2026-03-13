@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test de Orientación Vocacional</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<main>
+  <div class="header-container">
+    <div class="logo-container">
+        <a href="https://feac-studio.surge.sh/" target="_blank" class="logo-link">
+            <img src="img/water.png" alt="Logo FEAC Studio" class="logo">
+        </a>
+    </div>
+    <h1>Test Vocacional</h1>
+    <img src="img/logoqueu.png" alt="Logo Izquierdo" class="logo-left">
+</div>
+
+    <div id="welcome-screen">
+        <p>Responde las siguientes preguntas para descubrir qué carrera podría ser adecuada para ti.</p>
+        <button onclick="startTest()">Comenzar Test</button>
+    </div>
+    <div id="quiz-screen">
+        <form id="quiz-form">
+       <h2>Pregunta 1: ¿Qué actividad prefieres hacer en tu tiempo libre?</h2>
+       <label><input type="radio" name="q1" value="a"> a) Leer sobre ciencia o historia</label><br>
+       <label><input type="radio" name="q1" value="b"> b) Crear algo artístico (dibujar, pintar, etc.)</label><br>
+       <label><input type="radio" name="q1" value="c"> c) Experimentar con nuevas tecnologías (programar, jugar videojuegos, etc.)</label><br>
+       <label><input type="radio" name="q1" value="d"> d) Ayudar a los demás</label><br>
+       <label><input type="radio" name="q1" value="e"> e) Otros / No aplica</label><br><br>
+ 
+       <h2>Pregunta 2: ¿Cómo te sientes trabajando en grupo?</h2>
+       <label><input type="radio" name="q2" value="a"> a) Me gusta, ya que puedo aprender de otros y colaborar</label><br>
+       <label><input type="radio" name="q2" value="b"> b) Prefiero ser independiente, pero me adapto si es necesario</label><br>
+       <label><input type="radio" name="q2" value="c"> c) Prefiero trabajar solo, ya que soy más eficiente</label><br>
+       <label><input type="radio" name="q2" value="d"> d) Me siento cómodo, me gusta motivar y apoyar a los demás</label><br>
+       <label><input type="radio" name="q2" value="e"> e) Otros / No aplica</label><br><br>
+ 
+     
+
+      <h2>Pregunta 3: ¿Qué tipo de ambientes laborales prefieres?</h2>
+      <label><input type="radio" name="q3" value="a"> a) Ambientes estructurados, con reglas claras y tareas definidas</label><br>
+      <label><input type="radio" name="q3" value="b"> b) Espacios creativos donde se valora la expresión personal</label><br>
+      <label><input type="radio" name="q3" value="c"> c) Entornos dinámicos con retos tecnológicos y cambios constantes</label><br>
+      <label><input type="radio" name="q3" value="d"> d) Ambientes enfocados en el bienestar de los demás y en la ayuda comunitaria</label><br>
+      <label><input type="radio" name="q3" value="e"> e) Otros / No aplica</label><br><br>
+
+      <h2>Pregunta 4: Si tuvieras que resolver un problema complejo, ¿cómo lo harías?</h2>
+      <label><input type="radio" name="q4" value="a"> a) Investigar y analizar hechos, teorías y pruebas</label><br>
+      <label><input type="radio" name="q4" value="b"> b) Buscaría una solución original y única</label><br>
+      <label><input type="radio" name="q4" value="c"> c) Usaría herramientas tecnológicas para encontrar una solución</label><br>
+      <label><input type="radio" name="q4" value="d"> d) Consultaría con otros para obtener perspectivas diferentes</label><br>
+      <label><input type="radio" name="q4" value="e"> e) Otros / No aplica</label><br><br>
+
+      <h2>Pregunta 5: ¿Qué te motiva más al tomar decisiones?</h2>
+      <label><input type="radio" name="q5" value="a"> a) La lógica y la razón</label><br>
+      <label><input type="radio" name="q5" value="b"> b) La creatividad y la innovación</label><br>
+      <label><input type="radio" name="q5" value="c"> c) La funcionalidad y la eficiencia</label><br>
+      <label><input type="radio" name="q5" value="d"> d) El impacto positivo que pueda tener en los demás</label><br>
+      <label><input type="radio" name="q5" value="e"> e) Otros / No aplica</label><br><br>
+
+      <h2>Pregunta 6: Si tuvieras que aprender algo nuevo, ¿cómo lo harías?</h2>
+      <label><input type="radio" name="q6" value="a"> a) Estudiaría los fundamentos teóricos antes de aplicar cualquier cosa</label><br>
+      <label><input type="radio" name="q6" value="b"> b) Aprendería haciendo, probando nuevas ideas</label><br>
+      <label><input type="radio" name="q6" value="c"> c) Buscaría recursos en línea y herramientas tecnológicas</label><br>
+      <label><input type="radio" name="q6" value="d"> d) Buscaría ejemplos prácticos de cómo otros han resuelto el problema</label><br>
+      <label><input type="radio" name="q6" value="e"> e) Otros / No aplica</label><br><br>
+
+      <h2>Pregunta 7: ¿Qué tipo de tareas disfrutas más?</h2>
+      <label><input type="radio" name="q7" value="a"> a) Tareas que requieren análisis y resolución de problemas</label><br>
+      <label><input type="radio" name="q7" value="b"> b) Actividades que permiten expresar mi creatividad</label><br>
+      <label><input type="radio" name="q7" value="c"> c) Proyectos tecnológicos, como desarrollar aplicaciones o trabajar con datos</label><br>
+      <label><input type="radio" name="q7" value="d"> d) Ayudar a las personas a mejorar sus vidas de alguna manera</label><br>
+      <label><input type="radio" name="q7" value="e"> e) Otros / No aplica</label><br><br>
+
+      <h2>Pregunta 8: ¿Cómo prefieres abordar proyectos a largo plazo?</h2>
+      <label><input type="radio" name="q8" value="a"> a) Planifico todo desde el principio y sigo un cronograma detallado</label><br>
+      <label><input type="radio" name="q8" value="b"> b) Me gusta improvisar y encontrar soluciones innovadoras a medida que avanzamos</label><br>
+      <label><input type="radio" name="q8" value="c"> c) Me enfoco en la parte técnica y de ejecución, asegurándome de optimizar el proceso</label><br>
+      <label><input type="radio" name="q8" value="d"> d) Prefiero trabajar en equipo y asegurarme de que todos estén alineados</label><br>
+      <label><input type="radio" name="q8" value="e"> e) Otros / No aplica</label><br><br>
+
+      <h2>Pregunta 9: Si pudieras elegir una de estas habilidades para mejorar, ¿cuál escogerías?</h2>
+      <label><input type="radio" name="q9" value="a"> a) Habilidades de investigación y análisis</label><br>
+      <label><input type="radio" name="q9" value="b"> b) Habilidades artísticas y de diseño</label><br>
+      <label><input type="radio" name="q9" value="c"> c) Habilidades tecnológicas y de programación</label><br>
+      <label><input type="radio" name="q9" value="d"> d) Habilidades para ayudar y comprender a las personas</label><br>
+      <label><input type="radio" name="q9" value="e"> e) Otros / No aplica</label><br><br>
+
+      <h2>Pregunta 10: ¿Qué área de trabajo te resulta más interesante?</h2>
+      <label><input type="radio" name="q10" value="a"> a) Investigación científica, resolución de problemas técnicos</label><br>
+      <label><input type="radio" name="q10" value="b"> b) Arte, diseño, creatividad</label><br>
+      <label><input type="radio" name="q10" value="c"> c) Tecnología, programación, ingeniería</label><br>
+      <label><input type="radio" name="q10" value="d"> d) Trabajo social, salud, desarrollo humano</label><br>
+      <label><input type="radio" name="q10" value="e"> e) Otros / No aplica</label><br><br>
+
+      <h2>Pregunta 11: ¿Cómo prefieres organizar tu trabajo?</h2>
+      <label><input type="radio" name="q11" value="a"> a) Con listas de tareas y plazos bien definidos</label><br>
+      <label><input type="radio" name="q11" value="b"> b) Con ideas generales y una estructura flexible</label><br>
+      <label><input type="radio" name="q11" value="c"> c) Priorizando lo que sea más eficiente o rentable</label><br>
+      <label><input type="radio" name="q11" value="d"> d) Asegurándome de que todos los involucrados estén cómodos y motivados</label><br>
+      <label><input type="radio" name="q11" value="e"> e) Otros / No aplica</label><br><br>
+
+      <h2>Pregunta 12: ¿Cómo prefieres recibir retroalimentación sobre tu trabajo?</h2>
+      <label><input type="radio" name="q12" value="a"> a) A través de una evaluación detallada y precisa</label><br>
+      <label><input type="radio" name="q12" value="b"> b) Me gusta recibir sugerencias y recomendaciones creativas</label><br>
+      <label><input type="radio" name="q12" value="c"> c) Prefiero recibir comentarios sobre cómo mejorar mi eficiencia o habilidad técnica</label><br>
+      <label><input type="radio" name="q12" value="d"> d) Prefiero comentarios constructivos que me ayuden a mejorar personalmente</label><br>
+      <label><input type="radio" name="q12" value="e"> e) Otros / No aplica</label><br><br>
+      
+      <h2>Pregunta 13: Si tuvieras que elegir un tipo de proyecto, ¿cuál sería tu elección?</h2>
+      <label><input type="radio" name="q13" value="a"> a) Un proyecto de investigación o análisis de datos</label><br>
+      <label><input type="radio" name="q13" value="b"> b) Un proyecto de arte, como diseñar o crear algo visualmente atractivo</label><br>
+      <label><input type="radio" name="q13" value="c"> c) Un proyecto que implique tecnología, como crear una app o programar un software</label><br>
+      <label><input type="radio" name="q13" value="d"> d) Un proyecto de servicio social que impacte positivamente a las personas</label><br>
+      <label><input type="radio" name="q13" value="e"> e) Otros / No aplica</label><br><br>
+      
+      <h2>Pregunta 14: ¿Qué tipo de problemas disfrutas más resolver?</h2>
+      <label><input type="radio" name="q14" value="a"> a) Problemas que requieren análisis profundo y solución lógica</label><br>
+      <label><input type="radio" name="q14" value="b"> b) Problemas creativos donde puedo encontrar soluciones nuevas y originales</label><br>
+      <label><input type="radio" name="q14" value="c"> c) Problemas relacionados con la tecnología, como optimizar procesos o sistemas</label><br>
+      <label><input type="radio" name="q14" value="d"> d) Problemas sociales o humanos que impliquen ayudar a los demás</label><br>
+      <label><input type="radio" name="q14" value="e"> e) Otros / No aplica</label><br><br>
+      
+      <h2>Pregunta 15: ¿Cuál de estos aspectos consideras más importante en un trabajo?</h2>
+      <label><input type="radio" name="q15" value="a"> a) El desarrollo intelectual y el aprendizaje continuo</label><br>
+      <label><input type="radio" name="q15" value="b"> b) La expresión creativa y la oportunidad de hacer cosas únicas</label><br>
+      <label><input type="radio" name="q15" value="c"> c) La posibilidad de trabajar con tecnologías de vanguardia</label><br>
+      <label><input type="radio" name="q15" value="d"> d) El impacto positivo que puede tener en la sociedad y en los demás</label><br>
+      <label><input type="radio" name="q15" value="e"> e) Otros / No aplica</label><br><br>
+            
+
+
+            <button type="button" onclick="submitQuiz()">Enviar Respuestas</button>
+        </form>
+    </div>
+
+    <div id="result-screen">
+        <div id="result-text"></div>
+        <div id="result-breakdown">
+          <h4>Otras opciones de test vocacionales.</h4>
+            <a class="tests" href="https://testvocacional.gratis/universidad/paises/estados-unidos/harvard/">Test Vocacional de la Universidad de Harvard</a><br>
+            <a class="tests" href="https://www.123test.com/es/test-de-orientacion-profesional/">Test de Orientación Vocacional de 123Test</a><br>
+            <a class="tests" href="https://www.psicoactiva.com/tests/test-orientacion-profesional.htm">Orientación Profesional</a>
+        </div>
+    </div>
+  </main>
+    <footer class="footer-container">
+      <div class="logo-container">
+  <a href="https://feac-studio.surge.sh/" target="_blank" class="logo-link">
+      <img src="img/water.png" alt="Logo FEAC Studio" class="logo">
+  </a>
+</div>
+<p>&copy; 2025 Test Vocacional. Todos los derechos reservados.</p> 
+<p>⦿ Desarrollado po FEAC Studio</p>
+</footer>
+  <script src="script.js"></script>
+</body>
+</html>
