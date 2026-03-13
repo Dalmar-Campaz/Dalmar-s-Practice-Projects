@@ -1,0 +1,56 @@
+body {
+    background-color: black;
+    height: 100vh;
+    width: 100%;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.marco {
+    width: 800px;
+    height: 800px;
+    position: relative;
+    border: 2px solid white;
+}
+.jugador1 {
+    width: 16px;
+    height: 24px;
+    background-color: rgb(255, 255, 255);
+    position: absolute;
+}
+.jugador2 {
+    width: 16px;
+    height: 24px;
+    background-color: rgb(78, 78, 78);
+    position: absolute;
+}
+
+.goal {
+    width: 28px;
+    height: 40px;
+    background-color: white;
+    position: absolute;
+}
+/*plataforma*/
+
+.plataforma {
+    background-color: white;
+    height: 2px;
+    position: absolute;
+}
+.p-tipo1{
+    width: 50px;
+}
+.p-tipo2 {
+    width: 100px;
+}
+.p-tipo3 {
+    width: 150px;
+}
+.p-tipo4 {
+    width: 200px;
+}
+.p-tipo5 {
+    width: 25px;
+}
