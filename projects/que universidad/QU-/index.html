@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Buscador con Google Custom Search</title>
+  <link rel="stylesheet" href="css/styles.css"> <!-- Enlace al archivo CSS -->
+</head>
+<body>
+  <div class="container">
+    <h1>Buscar Universidades y Carreras</h1>
+    
+    <!-- Formulario de búsqueda -->
+    <form id="searchForm">
+      <input type="text" id="query" placeholder="Carrera o universidad..." required>
+      
+      <!-- Filtros de búsqueda -->
+      <select id="privatePublic">
+        <option value="">Tipo (Privada/Pública)</option>
+        <option value="private">Privada</option>
+        <option value="public">Pública</option>
+      </select>
+
+      <select id="mode">
+        <option value="">Modalidad (Presencial/Virtual)</option>
+        <option value="presencial">Presencial</option>
+        <option value="virtual">Virtual</option>
+      </select>
+
+      <input type="text" id="location" placeholder="Ubicación (ciudad, país)">
+      
+      <input type="number" id="price" placeholder="Precio aproximado (opcional)">
+      
+      <button type="submit">Buscar</button>
+    </form>
+
+    <div id="results" class="results"></div> <!-- Aquí se mostrarán los resultados -->
+  </div>
+
+  <script src="js/script.js"></script> <!-- Enlace al archivo JS -->
+</body>
+</html>
+
+<!--como hago pa ejecutarlo?-->

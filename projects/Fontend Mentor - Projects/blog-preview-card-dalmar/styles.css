@@ -1,0 +1,90 @@
+@font-face {
+  font-family: figtree;
+  src: url(fonts/Figtree-VariableFont_wght.ttf) format(truetype);
+}
+
+body {
+  margin: 0;
+  height: 100vh;
+  width: 100vw;
+  background-color: hsl(47, 88%, 63%);
+  justify-content: space-between;
+  font-family: figtree;
+}
+main, footer {
+    margin-top: auto;
+}
+body,
+.profile {
+  display: flex;
+  align-items: center;
+}
+body,
+.container {
+  flex-direction: column;
+}
+
+.container {
+  background-color: hsl(0, 0%, 100%);
+  width: 330px;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 10px 10px 0 hsl(0, 0%, 7%);
+  border: 1px solid hsl(0, 0%, 7%);
+  display: flex;
+}
+
+.container .illustration {
+  border-radius: 10px;
+  margin-bottom: 20px;
+  width: 330px;
+}
+.type {
+  text-align: center;
+  width: 70px;
+  border-radius: 5px;
+  background-color: hsl(47, 88%, 63%);
+  padding: 5px 10px;
+  margin-bottom: 10px;
+}
+.text-container span,
+.text-container h1,
+.type {
+  font-weight: 800;
+}
+.text-container h1 {
+  font-size: clamp(23px, 2vw, 24px);
+}
+.text-container h1:hover {
+  color: hsl(47, 88%, 63%);
+  cursor: pointer;
+}
+
+.text-container p:first-of-type {
+  font-weight: 500;
+}
+.text-container p {
+  font-size: 16px;
+  margin: 0;
+}
+.text-container p:last-of-type {
+  color: hsl(0, 0%, 42%);
+}
+.profile {
+  margin: 20px 0 0px;
+  gap: 10px;
+}
+.profile img {
+  width: 32px;
+}
+footer {
+    margin-bottom: 10px;
+
+}
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}

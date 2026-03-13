@@ -1,0 +1,91 @@
+/* Estilos básicos */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f9;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  .container {
+    width: 100%;
+    max-width: 800px;
+    background-color: white;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  h1 {
+    text-align: center;
+    color: #2a7f65;
+    font-size: 24px;
+  }
+  
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-bottom: 30px;
+  }
+  
+  input[type="text"], select, input[type="number"] {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  button {
+    padding: 10px;
+    background-color: #2a7f65;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  button:hover {
+    background-color: #246b52;
+  }
+  
+  .results {
+    margin-top: 20px;
+  }
+  
+  .result {
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    background-color: #fafafa;
+  }
+  
+  .result h3 {
+    margin: 0;
+    color: #2a7f65;
+  }
+  
+  .result p {
+    font-size: 14px;
+    color: #666;
+  }
+  
+  .result a {
+    color: #246b52;
+    text-decoration: none;
+  }
+  
+  .result a:hover {
+    text-decoration: underline;}
+  
+  /* Estilos para el mensaje de error */
+    .no-results {
+    text-align: center;
+    color: #ff4d4d;
+    font-size: 18px;
+  }

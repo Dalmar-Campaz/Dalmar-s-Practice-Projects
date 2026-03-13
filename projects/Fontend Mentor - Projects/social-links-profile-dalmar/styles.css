@@ -1,0 +1,113 @@
+:root {
+  --Green: hsl(75, 94%, 57%);
+  --White: hsl(0, 0%, 100%);
+  --Grey-700: hsl(0, 0%, 20%);
+  --Grey-800: hsl(0, 0%, 12%);
+  --Grey-900: hsl(0, 0%, 8%);
+}
+@font-face {
+  font-family: Inter;
+  src: url(fonts/Inter-VariableFont_slnt\wght.ttf);
+}
+@font-face {
+  font-family: Inter-Bold;
+  src: url(fonts/static/Inter-Bold.ttf);
+}
+@font-face {
+  font-family: Inter-Semibold;
+  src: url(fonts/static/Inter-SemiBold.ttf);
+}
+@font-face {
+  font-family: Inter-Regular;
+  src: url(fonts/static/Inter-Regular.ttf);
+}
+body {
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--Grey-900);
+  color: var(--White);
+  font-family: Inter;
+  font-size: 14px;
+  margin: 0;
+  justify-content: space-between;
+}
+body,
+.social-media-link {
+  padding: 0;
+}
+body,
+.container,
+.social-media-link {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.container {
+  background-color: var(--Grey-800);
+  padding: 20px;
+  border-radius: 10px;
+  width: 330px;
+}
+.container img {
+  border-radius: 50%;
+  width: 75px;
+}
+@media (max-width: 375px) {
+  main {
+    width: 90%;
+  }
+  .container {
+    width: 290px;
+  }
+}
+main,
+footer {
+  margin-top: auto;
+}
+.name {
+  margin-bottom: 10px;
+}
+.location {
+  color: var(--Green);
+  margin-top: 0;
+}
+.location,
+.name,
+.social-media-link li {
+  font-family: Inter-Semibold;
+}
+.role {
+  font-family: Inter-Regular;
+  color: #ccc;
+}
+.social-media-link {
+  gap: 15px;
+  width: 90%;
+}
+.social-media-link li {
+  background-color: var(--Grey-700);
+  list-style: none;
+  height: 2.8rem;
+  border-radius: 7px;
+  text-align: center;
+  align-content: center;
+  font-weight: 400;
+  width: 100%;
+  transition: background-color 0.2s ease 0.1s;
+}
+.social-media-link li:hover {
+  background-color: var(--Green);
+  color: var(--Grey-900);
+  cursor: pointer;
+  scale: 1.03;
+}
+footer {
+  margin-bottom: 20px;
+}
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}

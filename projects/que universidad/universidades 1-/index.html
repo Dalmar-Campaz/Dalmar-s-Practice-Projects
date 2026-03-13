@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buscar Universidades</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Busca tu Universidad</h1>
+    </header>
+
+    <main>
+        <section id="busqueda">
+            <h2>Encuentra tu universidad ideal</h2>
+            <label for="carrera">Carrera a buscar:</label>
+                <input class="barra-busqueda" type="text" id="carrera" name="carrera" placeholder="Ejemplo: Ingeniería de Software">
+                <!--boton de busqueda-->
+                <button form="search-form" type="submit" style="padding: 8px 15px;">Buscar</button>
+            <!--este es el botonsito-->
+            <button id="filtros-boton" class="filtros-boton">Filtrar</button>
+            <form id="search-form" class="search-form">
+                <div style="display: flex; flex-direction: row; justify-content: space-between; width: 500px; text-align: center;">
+                <div class="radio-group">
+                    <label for="nivel" class="subtitulo">Nivel de formación:</label>
+                    <label><input type="radio" name="nivel" value="" checked> Sin filtro</label>
+                    <label><input type="radio" name="nivel" value="Técnico Laboral"> Técnico Laboral</label>
+                    <label><input type="radio" name="nivel" value="Técnico Profesional"> Técnico Profesional</label>
+                    <label><input type="radio" name="nivel" value="Tecnológico"> Tecnológico</label>
+                    <label><input type="radio" name="nivel" value="Universitario"> Universitario</label>
+                </div>
+                <div class="radio-group">
+                    <label for="modalidad" class="subtitulo">Modalidad:</label>
+                    <label><input type="radio" name="modalidad" value="" checked>Sin filtro</label>
+                    <label><input type="radio" name="modalidad" value="Presencial">Presencial</label>
+                    <label><input type="radio" name="modalidad" value="A distancia">A distancia</label>
+                    <label><input type="radio" name="modalidad" value="Virtual">Virtual</label>
+                    <label><input type="radio" name="modalidad" value="Dual">Dual</label>
+
+                </div></div>
+
+                <!--esta parte NO la tenias vos en el javascript pero si en el modelo que me mandaste por wasa
+                lo voy a poner pero luego vos decidis si lo agregas al script-->
+                <div class="radio-group" style="position: absolute; top: 80px; right: 30px;">
+                    <label class="subtitulo" for="tipo">Tipo:</label>
+                    <label><input checked type="radio" name="tipo" value="">cualquiera</label>
+                    <label><input type="radio" name="tipo" value="privada">Privada</label>
+                    <label><input type="radio" name="tipo" value="publica">Publica</label>
+                </div>
+
+                <div style="position: absolute; top: 20px; right: 20px;">
+                    <label for="ubicacion" class="subtitulo">Ubicación (País o ciudad):</label>
+                    <input style="width: 200px;" type="text" id="ubicacion" name="ubicacion" placeholder="Ejemplo: Colombia o Bogotá">
+                </div>
+            </form>
+        </section>
+
+        <section id="resultados">
+            <h2>Resultados de búsqueda</h2>
+            <div id="lista-resultados"></div>
+            <div id="page-numbers"></div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

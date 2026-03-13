@@ -1,0 +1,303 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #fff;
+    color: #000;
+}
+
+header {
+    text-align: center;
+    padding: 20px;
+    border-bottom: 1px solid #000;
+}
+
+    /* Contenedor del logo en el header */
+    .logo-container {
+        top: 15px;
+        left: 15px;
+    }
+  
+    /* Estilos para el enlace del logo */
+    .logo-link {
+        display: block;
+        text-decoration: none;
+        transition: all 0.3s ease;
+    }
+  
+    .logo-link:hover {
+        transform: scale(1.05);
+    }
+  
+    /* Estilos para el logo principal */
+    .logo {
+        width: 65px;
+        height: 65px;
+        object-fit: contain;
+        padding: 0.4rem;
+        background: rgba(255, 255, 255, 0.15);  /* Círculo más opaco */
+        transition: all 0.3s ease;
+        box-shadow: 0 4px 5px rgba(0, 0, 0, 0.2);
+        border: 1px solid rgba(255, 255, 255, 0.2);
+    }
+  
+    .logo:hover {
+        background: rgba(255, 255, 255, 0.25);  /* Hover ligeramente más visible */
+        box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+    }
+
+.header-container {
+    display: flex;
+    justify-content: space-between; /* Distribuye los elementos */
+    align-items: center;
+    padding: 10px 20px;
+    background: #fff; /* Fondo blanco */
+    border-bottom: 2px solid #ddd;
+}
+
+.logo-left {
+    width: 70px; /* Ajusta el tamaño del logo derecho */
+    height: 70px;
+    border-radius: 50%;
+}
+
+
+main {
+    max-width: 800px;
+    margin: auto;
+    padding: 20px;
+}
+
+h1{
+ font-size: 45px;
+}
+
+
+h2 {
+    border-bottom: 1px solid #000;
+    padding-bottom: 10px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    position: relative;
+}
+
+/* Ajuste de la barra de búsqueda y botones */
+.busqueda-principal {
+    text-align: center;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+}
+
+.busqueda-principal input {
+    flex: 2;
+    padding: 12px;
+    font-size: 16px;
+}
+
+.busqueda-principal button {
+    flex: 1;
+    padding: 12px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+}
+
+button {
+    background-color: #000;
+    color: #fff;
+}
+
+button:hover {
+    background-color: #333;
+}
+
+#toggle-filtros {
+    background-color: #444;
+}
+
+#toggle-filtros:hover {
+    background-color: #666;
+}
+
+/* Estilos para filtros ocultos */
+#filtros {
+    display: none;
+    margin-top: 10px;
+    padding: 10px;
+    border: 1px solid #000;
+    background-color: #f9f9f9;
+}
+
+.filtro {
+    margin-top: 10px;
+}
+
+.filtros-container {
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Centra los filtros */
+    align-items: flex-start;
+    gap: 40px; /* Espacio entre cada categoría */
+    padding: 15px;
+    background: #f5f5f5;
+    border-radius: 8px;
+    max-width: 800px; /* Limita el ancho para mejor presentación */
+    margin: 0 auto; /* Centra el contenedor */
+    position: relative;
+}
+
+.filtro {
+    flex: 1;
+    min-width: 180px;
+    text-align: center; /* Centra los títulos y opciones */
+    position: relative;
+}
+
+/* Línea divisoria entre filtros */
+.filtro:not(:last-child)::after {
+    content: "";
+    position: absolute;
+    right: -20px; /* Espaciado de la línea */
+    top: 10%;
+    height: 60%; /* Longitud de la línea */
+    width: 2px;
+    background: #ccc; /* Color de la línea gris */
+}
+
+/* Estilos de los títulos */
+.filtro h4 {
+    margin-bottom: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+}
+
+/* Estilos de las opciones */
+.filtro label {
+    display: block;
+    font-size: 14px;
+    color: #666;
+    cursor: pointer;
+}
+
+/* Estilos del campo de ubicación */
+.filtro input[type="text"] {
+    width: 70%; /* Hace que sea más pequeño */
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+    text-align: center; /* Centra el texto */
+    display: block;
+    margin: 0 auto; /* Centra el input */
+}
+
+
+.opciones {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+/*Resultado*/
+
+.resultado {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+}
+
+.resultado img {
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.resultado div {
+    flex: 1;
+}
+
+.resultado a {
+    text-decoration: none;
+    color: #000; /* Link en negro */
+    font-weight: bold;
+}
+
+.resultado p {
+    color: #888; /* Descripción en gris claro */
+    font-size: 14px;
+    font-weight: 300;
+}
+
+/*Boton de nav-egar*/
+
+.nav-btn {
+    background-color: #000000;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    margin: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.nav-btn:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+/*Footer*/
+
+
+.footer-container {
+    
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+    background: #f8f8f8;
+    border-top: 2px solid #ddd;
+    position: relative;
+    width: 00%;
+}
+
+.logo-footer {
+    width: 50px;
+    height: 50px;
+    background: rgba(0, 0, 0, 0.1); /* Cuadro transparente */
+    padding: 10px;
+    margin-right: 10px;
+}
+
+.footer-container p {
+    color: #555;
+    font-size: 14px;
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex: 1; /* Hace que el contenido principal empuje el footer hacia abajo */
+}
+
+.footer-container {
+    width: 100%;
+    background: #f8f8f8;
+    border-top: 2px solid #ddd;
+    padding: 15px;
+    text-align: center;
+}

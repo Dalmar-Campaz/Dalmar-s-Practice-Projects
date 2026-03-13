@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="favicon_io/favicon.ico" type="image/x-icon">
+    <title>¿Que Universidad?</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="header-container">
+        <div class="logo-container">
+            <a href="https://feac-studio.surge.sh/" target="_blank" class="logo-link">
+                <img src="img/water.png" alt="Logo FEAC Studio" class="logo">
+            </a>
+        </div>
+        <h1>¿Que Universidad?</h1>
+        <img src="img/logoqueu.png" alt="Logo Izquierdo" class="logo-left">
+    </div>
+    
+
+    <main>
+        <section id="busqueda">
+            <h2>Encuentra tu universidad ideal</h2>
+            <form id="search-form">
+                <div class="busqueda-principal">
+                    <input type="text" id="carrera" name="carrera" placeholder="Ejemplo: Ingeniería de Software">
+                    <button type="submit">Buscar</button>
+                    <button type="button" id="toggle-filtros">Filtros</button>
+                </div>
+
+                <div id="filtros" style="display: none;">
+                    <div class="filtros-container">
+                        <!-- Nivel de Formación -->
+                        <div class="filtro">
+                            <h4>Nivel de Formación</h4>
+                            <label><input type="radio" name="nivel" value=""> Todos los niveles</label>
+                            <label><input type="radio" name="nivel" value="Técnico Laboral"> Técnico Laboral</label>
+                            <label><input type="radio" name="nivel" value="Técnico Profesional"> Técnico Profesional</label>
+                            <label><input type="radio" name="nivel" value="Tecnológico"> Tecnológico</label>
+                            <label><input type="radio" name="nivel" value="Universitario"> Universitario</label>
+                        </div>
+                
+                        <!-- Modalidad -->
+                        <div class="filtro">
+                            <h4>Modalidad</h4>
+                            <label><input type="radio" name="modalidad" value=""> Todas</label>
+                            <label><input type="radio" name="modalidad" value="Presencial"> Presencial</label>
+                            <label><input type="radio" name="modalidad" value="Distancia"> Distancia</label>
+                            <label><input type="radio" name="modalidad" value="Virtual"> Virtual</label>
+                            <label><input type="radio" name="modalidad" value="Dual"> Dual</label>
+                        </div>
+                
+                        <!-- Tipo de Universidad -->
+                        <div class="filtro">
+                            <h4>Tipo</h4>
+                            <label><input type="radio" name="tipo" value=""> Cualquiera</label>
+                            <label><input type="radio" name="tipo" value="Privada"> Privada</label>
+                            <label><input type="radio" name="tipo" value="Pública"> Pública</label>
+                        </div>
+                
+                        <!-- Ubicación -->
+                        <div class="filtro">
+                            <h4>Ubicación</h4>
+                            <input type="text" id="ubicacion" placeholder="Ingresa ciudad o país">
+                        </div>
+                    </div>
+                </div>
+                
+                    </div>
+                </div>
+            </form>
+        </section>
+
+        <section id="resultados">
+            <h2>Resultados de búsqueda</h2>
+                    
+            <div id="lista-resultados"></div>
+            <div id="navegacion-container" style="text-align: center; margin-top: 20px;"></div> <!-- Este div es clave -->
+
+            
+        </section>
+    </main>
+    <footer class="footer-container">
+                <div class="logo-container">
+            <a href="https://feac-studio.surge.sh/" target="_blank" class="logo-link">
+                <img src="img/water.png" alt="Logo FEAC Studio" class="logo">
+            </a>
+        </div>
+        <p>&copy; 2025 ¿Que Universidad?. Todos los derechos reservados.</p> 
+        <p>⦿ Desarrollado po FEAC Studio</p>
+    </footer>
+    
+    <script src="script.js"></script>
+</body>
+</html>

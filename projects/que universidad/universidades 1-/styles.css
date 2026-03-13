@@ -1,0 +1,198 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #fff;
+    color: #000;
+}
+
+header {
+    text-align: center;
+    padding: 20px;
+    border-bottom: 1px solid #000;
+}
+
+main {
+    width: 100%;
+    max-width: 800px;
+    min-width: 199px;
+    margin: auto;
+    padding: 20px;
+}
+
+h2 {
+    border-bottom: 1px solid #000;
+    padding-bottom: 10px;
+}
+
+form {
+    display: inline;
+    gap: 20px; 
+    position: relative;
+}
+
+/*esta es la parte del primer filtro. tambien tiene reglas generales del comportamiento de los otros filtros */
+
+.radio-group {
+    width: 100%;
+    max-width: 200px;
+    gap: 10px;
+    text-align: left;
+    font-weight: 100;
+    margin-bottom: 20px;
+}
+
+.radio-group label {
+    display: flex; 
+    gap: 8px; 
+}
+
+input, button {
+    padding: 10px;
+    border: 1px solid #000;
+}
+input[type="radio"] {
+    display: inline;
+    margin: 10px 0;
+    vertical-align: middle;
+}
+.barra-busqueda{
+    width: 100%;
+    max-width: 500px;
+    min-width: 200px;
+}
+
+button {
+    background-color: #000;
+    color: #fff;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #333;
+}
+
+/* Estilos para los resultados */
+#lista-resultados {
+    margin-top: 20px;
+}
+
+.resultado {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 15px 0;
+    border-bottom: 1px solid #ccc;
+}
+
+.resultado img {
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
+    border-radius: 5px;
+}
+
+.resultado a {
+    text-decoration: none;
+    color: #000;
+    font-weight: bold;
+}
+
+.resultado p {
+    color: #777;
+    font-size: 14px;
+    font-weight: 300;
+}
+
+/* Estilo para el botón "Ver más" */
+.ver-mas-btn {
+    padding: 10px 20px;
+    background-color: #000;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+.ver-mas-btn:hover {
+    background-color: #333;
+}
+
+/*menu de filtros*/
+.nf {
+    text-align: left;
+}
+
+/* este es la parte del css code que controla como se comporta ese form de shit */
+.subtitulo{
+    font-weight: bold;
+}
+
+.filtros-boton {
+    padding: 8px 15px;
+    background-color: #ffffff;
+    color: rgb(0, 0, 0);
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    border: 1px solid #000;
+}
+
+.filtros-boton:hover {
+    background-color: #000000;
+    color: white;
+}
+
+.search-form {
+    display: none;
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.search-form label {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    
+}
+.search-form input {
+
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+.search-form .submit-btn {
+    padding: 8px 15px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+.search-form .submit-btn:hover {
+    background-color: #218838;
+}
+
+/* Animación*/
+.search-form.active {
+    display: block;
+    animation: slideDown 0.3s ease-out;
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
