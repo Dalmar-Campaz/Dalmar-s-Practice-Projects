@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <main class="calculadora">
+        <input type="text" id="pantalla" placeholder="0" oninput="this.value = this.value.replace(/[^0-9+\-x/.%]/g,'')">
+        <div class="btn-group">
+            <div id="clear">C</div>
+            <div id="back">
+                <span></span><span></span><span>x</span>
+            </div>
+            <div id="porcentaje">%</div>
+            <div id="siete">7</div>
+            <div id="ocho">8</div>
+            <div id="nueve">9</div>
+            <div id="cuatro">4</div>
+            <div id="cinco">5</div>
+            <div id="seis">6</div>                 
+            <div id="uno">1</div>
+            <div id="dos">2</div>
+            <div id="tres">3</div>
+            <div id="cero">0</div>
+            <div id="multiplicar">x</div>
+            <div id="dividir">/</div>
+            <div id="restar">-</div>
+            <div id="sumar">+</div>
+            <div id="igual">=</div>
+            <div id="punto">.</div>
+            <div id="cuadrado"><p>X<sup>2</sup></p></div>
+        </div>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>

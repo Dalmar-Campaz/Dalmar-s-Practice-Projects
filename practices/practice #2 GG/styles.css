@@ -1,0 +1,59 @@
+@font-face {
+  font-family: Outfit;
+  src: url(fonts/outfit/Outfit-VariableFont_wght.ttf);
+}
+body {
+  font-family: Outfit;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 100vw;
+  padding-top: 56px;
+  margin: 0;
+  background-color: #fffefe;
+}
+main {
+  width: 100%;
+}
+.google {
+  font-size: 100px;
+  display: flex;
+  column-gap: 0;
+  font-weight: 500;
+}
+.amarillo {
+  color: rgb(255, 217, 0);
+}
+.verde {
+  color: rgb(0, 167, 0);
+}
+.rojo {
+  color: red;
+}
+.azul {
+  color: rgb(0, 77, 221);
+}
+#buscador {
+  border: 1px solid #dadada;
+  border-radius: 30px;
+  width: 100%;
+  max-width: 800px;
+  background-color: white;
+  padding: 15px 30px;
+}
+
+.tema {
+  position: fixed;
+  bottom: 16px;
+  right: 16px;
+  border: 1px solid #dadada;
+  border-radius: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  padding: 10px 20px;
+  background-color: white;
+}
+.tema:hover {
+  background-color: rgb(233, 231, 231);
+  cursor: pointer;
+}

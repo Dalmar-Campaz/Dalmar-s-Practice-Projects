@@ -1,0 +1,28 @@
+.music-box {
+    background-color:rgb(25, 25, 25);
+    margin-right: 5px;
+    width: 40%;
+    max-width: 450px;
+    min-width: 250px;
+    height: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+    row-gap: 10px;
+}
+input[type="text"]{
+    outline: none;
+    padding: 0 10px;
+    line-height: 1.5em;
+    background-color: #2e2d2d;
+    border: none;
+    border-radius: 3px;
+    font-size: 1rem;
+    color: white;
+}
+.music-box div {
+    height: 100%;
+}
+.music-box h2 {
+    margin: 0 0 10px;
+    padding: 0;
+}

@@ -1,0 +1,53 @@
+@font-face {
+    font-family: Outfit;
+    src: url(fonts/outfit/Outfit-VariableFont_wght.ttf);
+}
+
+body {
+    background-color: rgb(48, 47, 53);
+    font-family: Outfit;
+    color: #ddd;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+    width: 100vw;
+    padding-top: 100px;
+}
+.tablero {
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    gap: 10px;
+    margin: 20px auto;
+    justify-content: center;
+}
+.celda {
+    width: 100px;
+    height: 100px;
+    background-color: #ddd;
+    color: black;
+    font-size: 4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.celda:hover {
+    cursor: pointer;
+    background-color: #bbb;
+}
+
+#reset {
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 10px;
+    border: none;
+    transition: 0.3s ease;
+    margin-top: 20px;
+}
+#reset:hover {
+    background-color: #b8b8b8;
+    scale: 1.1;
+    transform: translateY(-3px);
+    cursor: pointer;
+}

@@ -1,0 +1,111 @@
+@font-face {
+  font-family: Outfit;
+  src: url(assets/fonts/outfit/Outfit-VariableFont_wght.ttf);
+}
+body {
+  background-color: #0e1116;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: Outfit;
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+.flex-c {
+  display: flex;
+  flex-direction: column;
+}
+.container {
+  height: 700px;
+  width: 40%;
+  max-width: 500px;
+  min-width: 300px;
+  background-color: #1a1d23;
+  border-radius: 10px;
+  padding: 20px;
+  box-sizing: border-box;
+  row-gap: 25px;
+}
+h1 {
+  text-align: center;
+  margin: 0 0 20px;
+  color: #fbbf24;
+}
+input {
+  width: 70%;
+  padding: 0 10px;
+  background-color: #0e1116;
+  color: white;
+  font-size: 20px;
+  margin: 0 25px;
+}
+button {
+  background-color: #fbbf24;
+  padding: 0px 15px;
+  cursor: pointer;
+  font-weight: 550;
+  font-size: 16px;
+}
+button:hover {
+  background-color: #ffd21c;
+}
+input[type="text"],
+button {
+  outline: none;
+  border: none;
+  border-radius: 5px;
+  height: 40px;
+}
+#tasks {
+  width: 100%;
+  scrollbar-color:  #ffd21c transparent;
+  scrollbar-width: thin;
+  row-gap: 14px;
+  align-items: center;
+  overflow-y: auto;
+  flex: 1;
+  max-height: 530px;
+}
+.task {
+  width: 85%;
+  height: 60px;
+  background-color: #23262c;
+  border-radius: 6px;
+  padding: 0 25px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-shrink: 0;
+}
+span {
+  color: white;
+  flex: 1;
+  margin-left: 10px;
+  font-size: 18px;
+}
+input[type="checkbox"] {
+  width: 20px;
+  height: 20px;
+  margin: 0;
+  accent-color: #fbbf24;
+  cursor: pointer;
+}
+i {
+  color:#fbbf24;
+  cursor: pointer;
+} 
+i:hover {
+  color: rgb(194, 26, 26);
+}
+.delete-task {
+  width: 20px;
+  height: 20px;
+  color:#fbbf24
+}
+.task.completed span {
+  opacity: 0.8;
+  color: #fbbf24;
+}
+

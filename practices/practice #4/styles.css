@@ -1,0 +1,24 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #222;
+    color: white;
+    text-align: center;
+}
+#juego {
+    width: 60%;
+    margin: auto;
+    background: #333;
+    padding: 20px;
+    border-radius: 10px;
+}
+button {
+    background: #555;
+    color: white;
+    border: none;
+    padding: 10px;
+    margin: 5px;
+    cursor: pointer;
+}
+button:hover {
+    background: #777;
+}

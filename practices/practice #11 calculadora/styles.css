@@ -1,0 +1,113 @@
+@font-face {
+    font-family: Outfit;
+    src: url(fonts/outfit/Outfit-VariableFont_wght.ttf);
+}
+
+body {
+    background-color: black;
+    margin: 0;
+    width: 100%;
+    height: 100vh;
+    color: white;
+    font-family: Outfit;
+    display: flex;
+    align-items: center;
+}
+
+.calculadora {
+    width: 500px;
+    height: fit-content;
+    background-color: #121212;
+    display: flex;
+    flex-direction: column;
+    margin:auto;
+    padding: 5px;
+    border: 1px solid #e2666656;
+}
+#pantalla {
+    height: 140px;
+    border: none;
+    background-color: #1d1d1d;
+    color: white;
+    font-size: 50px;
+    text-align: end;
+    padding: 0 5px;
+    font-family: Outfit;
+    padding: 0 10px;
+}
+#pantalla::placeholder{
+    color: white;
+}
+#pantalla:focus {
+    outline: none;
+    caret-color: transparent;
+}
+#pantalla:not(:placeholder-shown):focus {
+    caret-color: #a2a2a2;
+}
+.btn-group {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(5, 72px);
+    width: 100%;
+    height: 60%;
+}
+.btn-group div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 22px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+.btn-group div:hover {
+    background-color: #1d1d1d;
+}
+#cero {
+    grid-row: 5;
+    grid-column: 2;
+}
+#dividir, #restar, #sumar, #multiplicar, #igual {
+    grid-column: 4;
+}
+#dividir{
+    grid-row: 1;
+}
+#multiplicar {
+    grid-row: 2;
+}
+#restar {
+    grid-row: 3;
+}
+#sumar {
+    grid-row: 4;
+}
+#igual {
+    grid-row: 5;
+    background-color: #e61111;
+}
+#punto {
+    grid-column: 3;
+    grid-row: 5;
+}
+#back span:nth-child(1){
+    width: 12px;
+    height: 12px;
+    border: 2px solid white;
+    border-right: none;
+    border-top: none;
+    box-sizing: border-box;
+    rotate: 45deg;
+    transform: translate(4px, -4px);
+} 
+#back span:nth-child(2) {
+    width: 20px;
+    height: 18px;
+    border: 2px solid white;
+    box-sizing: border-box;
+    border-left: none;
+}
+#back span:nth-child(3) {
+    transform: translate(-17px, -2px);
+    font-size: 18px;
+}
