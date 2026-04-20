@@ -81,3 +81,6 @@
   white-space: nowrap;
   text-overflow: ellipsis;
 }
+.active {
+  background: linear-gradient(#0f0d0d,70%,#e93e5533);
+}

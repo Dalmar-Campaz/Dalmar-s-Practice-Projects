@@ -8,7 +8,7 @@ Este es el proyecto final de Fundamentos Web. Se trata de un reproductor de mús
 
 - [x] Planificación del proyecto
 - [x] Desarrollo del frontend (HTML, CSS, JS)
-- [x] Estilos y diseño responsive
+- [ ] Estilos y diseño responsive
 - [ ] Funcionalidades del reproductor
 - [ ] Terminado
 
