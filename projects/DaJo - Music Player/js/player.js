@@ -1,6 +1,6 @@
 const btn = document.getElementById("pp");
 
-btn.addEventListener('click', () => {
+function playPause () {
     if (btn.classList.contains("fa-play")) {
         btn.classList.remove("fa-play")
         btn.classList.add("fa-pause")
@@ -8,4 +8,7 @@ btn.addEventListener('click', () => {
         btn.classList.remove("fa-pause")
         btn.classList.add("fa-play")
     }
+}
+btn.addEventListener('click', () => {
+    playPause();
 })
