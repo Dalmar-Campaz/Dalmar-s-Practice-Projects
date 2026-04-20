@@ -2,7 +2,7 @@
   box-sizing: border-box;
 }
 .music-box {
-  background-color: #0D0E0F;
+  background-color: #0d0e0f;
   margin-right: 5px;
   width: 50%;
   max-width: 480px;
@@ -45,17 +45,17 @@
 }
 .song:hover {
   cursor: pointer;
-  background-color: #252525;
+  background-color: #2524248d;
   border-radius: 3px;
 }
 .song img {
-    height: 45px;
-    width: 45px;
-    border-radius: 2px;
+  height: 45px;
+  width: 45px;
+  border-radius: 2px;
 }
 #display-songs {
-    overflow-y: scroll;
-    scrollbar-gutter: stable;
+  overflow-y: scroll;
+  scrollbar-gutter: stable;
 }
 #display-songs {
   overflow-y: auto;
@@ -73,7 +73,7 @@
 }
 
 #display-songs::-webkit-scrollbar-thumb {
-  background: rgba(255,255,255,0.15);
+  background: rgba(255, 255, 255, 0.15);
   border-radius: 10px;
 }
 .music-box p {
@@ -82,5 +82,5 @@
   text-overflow: ellipsis;
 }
 .active {
-  background: linear-gradient(#0f0d0d,70%,#e93e5533);
+  background: #3c3b3b8d;
 }

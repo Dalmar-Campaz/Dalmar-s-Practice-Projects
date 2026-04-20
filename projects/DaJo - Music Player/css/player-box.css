@@ -12,6 +12,7 @@
   margin-bottom: 40px;
 }
 .player-box h2 {
+  text-align: center;
   width: 60%;
   font-size: 50px;
   margin: 0;
@@ -23,6 +24,7 @@ span {
   margin-bottom: 40px;
   color: #e93e55;
   font-size: 20px;
+  text-align: center;
 }
 #song-time {
   width: 80%;
