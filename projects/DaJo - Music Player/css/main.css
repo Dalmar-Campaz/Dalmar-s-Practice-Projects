@@ -28,6 +28,9 @@ body {
   background-color: #090A0B;
   color: white;
 }
+.hidden {
+  display: none;
+}
 h1 {
   margin: 10px 0 0;
   letter-spacing: 3px;

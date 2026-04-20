@@ -6,7 +6,10 @@
   align-items: center;
   justify-content: end;
 }
-#cover {
+.default-cover{
+  width: 350px;
+}
+.cover {
   width: 200px;
   height: 200px;
   margin-bottom: 40px;
@@ -27,8 +30,23 @@ span {
   text-align: center;
 }
 #song-time {
+  -webkit-appearance: none;
   width: 80%;
   margin-bottom: 20px;
+  background: linear-gradient(to right, #ff3b3b 0%, #252525 0%);
+  border-radius: 50px;
+}
+#song-time::-webkit-slider-thumb{
+  -webkit-appearance: none;
+  width: 14px;
+  height: 14px;
+  background: #ff3b3b;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: 0.2s;
+}
+#song-time::-webkit-slider-thumb:hover{
+  transform: scale(1.2)
 }
 .controls {
   margin-bottom: 20px;

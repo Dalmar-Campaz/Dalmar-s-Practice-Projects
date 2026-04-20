@@ -21,11 +21,11 @@ async function getSongs() {
     try {
         let songs = [];
 
-        for(const element of urls){
-        const respuesta = await fetch(element.url);
-        const data = await respuesta.json();
+        for (const element of urls) {
+            const respuesta = await fetch(element.url);
+            const data = await respuesta.json();
 
-        songs.push(...data.results);
+            songs.push(...data.results);
 
         }
 
@@ -63,6 +63,7 @@ function loadPlayer(song) {
 
 
 container.addEventListener('click', (e) => {
+    document.getElementById("cover").classList.replace("default-cover", "cover");
     const songDiv = e.target.closest(".song");
     if (!songDiv) return;
 

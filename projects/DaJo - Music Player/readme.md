@@ -27,7 +27,12 @@ Este es el proyecto final de Fundamentos Web. Se trata de un reproductor de mús
 
 **API Publica usada**
 
+Para este proyecto estamos usando la API de itunes y seleccionamos a 4 artitas (bad bunny, the weekend, drake, eminen) para el catalogo del proyecto. Los links son los siguientes:
+
 - https://itunes.apple.com/search?term=eminem&entity=song
+- https://cors-anywhere.herokuapp.com/https://itunes.apple.com/search?term=drake&entity=song
+- https://cors-anywhere.herokuapp.com/https://itunes.apple.com/search?term=the+weeknd&entity=song
+- https://cors-anywhere.herokuapp.com/https://itunes.apple.com/search?term=badbunny&entity=song
 
 ---
 
