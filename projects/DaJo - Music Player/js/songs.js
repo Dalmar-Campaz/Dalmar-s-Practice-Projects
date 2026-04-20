@@ -1,3 +1,8 @@
+
+let songs = [];
+const container = document.getElementById("display-songs");
+
+
 async function getSongs() {
     try {
         const url = "https://cors-anywhere.herokuapp.com/https://itunes.apple.com/search?term=eminem&entity=song";
@@ -11,11 +16,9 @@ async function getSongs() {
 }
 
 async function mostrarSongs() {
-    const songs = await getSongs();
-
-    const container = document.getElementById("display-songs");
+    songs = await getSongs();
     container.innerHTML = "";
-
+    
     songs.results.forEach((element) => {
         let cancion = `
             <div class="flex-r song" id="${element.trackId}">
