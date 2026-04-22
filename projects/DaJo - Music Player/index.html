@@ -5,7 +5,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!--css links-->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
     <link rel="stylesheet" href="css/main.css" />
     <link rel="stylesheet" href="css/player-box.css" />
     <link rel="stylesheet" href="css/music-box.css" />
@@ -13,9 +16,18 @@
     <title>DaJo Player</title>
   </head>
   <body>
-    <h1>DaJo Player</h1>
-    <div class="boxes-container flex-r">
-      <section class="music-box">
+    <h1><span style="color: #e93e55">DaJo</span> Player</h1>
+    <!--width < 920px-->
+    <div class="center show-songs-btn" id="show-songs-btn">
+      <p>Canciones</p>
+      <i class="fa-solid fa-angle-right"></i>
+    </div>
+    <div class="songs-overlay hidden" id="songs-overlay"></div>
+
+    <div class="boxes-container center flex-r">
+      <!--apartado de la caja de canciones-->
+
+      <section class="music-box" id="music-box">
         <div class="songs flex-c">
           <h2>Canciones</h2>
           <input
@@ -30,13 +42,15 @@
       <!--apartado de la caja de controles-->
 
       <section class="player-box flex-c" id="player-box">
-        <img class="default-cover" id="cover" src="assets/icons/favicon.png">
+        <i id="close-player" class="fa-solid fa-xmark center"></i>
+        <br>
+        <img class="default-cover" id="cover" src="assets/icons/favicon.png" />
         <h2 id="title"></h2>
-        <span id="artist"></span>
+        <span class="artist" id="artist"></span>
         <input type="range" id="song-time" value="0" />
         <div class="controls flex-r center">
-          <i class="fa-solid fa-shuffle"></i> 
-          <i class="fa-solid fa-backward-step"></i> 
+          <i class="fa-solid fa-shuffle"></i>
+          <i class="fa-solid fa-backward-step"></i>
           <i class="fa-solid fa-play" id="pp"></i>
           <i class="fa-solid fa-forward-step"></i>
           <i class="fa-solid fa-volume-high"></i>
@@ -44,12 +58,11 @@
       </section>
     </div>
     <footer>
-      <p>
-        Code By Dalmar Campaz - David vidal &copy
-      </p>
+      <p>Code By Dalmar Campaz - David vidal &copy</p>
     </footer>
+    <script type="module" src="js/sizeBasedBehavior.js"></script>
     <script src="js/player.js"></script>
-    <script src="js/songs.js"></script>
+    <script type="module" src="js/songs.js"></script>
   </body>
 </html>
 <!-- <script>

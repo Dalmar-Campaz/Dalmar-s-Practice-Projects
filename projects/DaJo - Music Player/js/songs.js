@@ -1,3 +1,5 @@
+import { toggleSongsMenu } from "./sizeBasedBehavior.js";
+import { togglePlayer } from "./sizeBasedBehavior.js";
 
 let songs = [];
 const container = document.getElementById("display-songs");
@@ -72,7 +74,13 @@ container.addEventListener('click', (e) => {
     document.querySelectorAll(".song").forEach(s => s.classList.remove("active"));
     songDiv.classList.add("active");
 
-    loadPlayer(song);
+    loadPlayer(song);    
+    if(window.innerWidth <= 920 && window.innerWidth > 450){
+        toggleSongsMenu();
+    }
+    if(window.innerWidth <= 450){
+        togglePlayer();
+    }
 })
 
 mostrarSongs();
