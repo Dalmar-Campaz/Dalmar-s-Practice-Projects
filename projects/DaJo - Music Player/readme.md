@@ -1,6 +1,8 @@
 # Reproductor de Música Web
 
-Este es el proyecto final de Fundamentos Web. Se trata de un reproductor de música creado con tecnologías vistas en clase (HTML/CSS, javascript). El objetivo es practicar y aplicar lo aprendido en HTML, CSS, JavaScript y manejo de API's.
+Este es el proyecto final de Fundamentos Web. Se trata de un reproductor de música creado con tecnologías vistas en clase (HTML/CSS, javascript). El objetivo es practicar y aplicar lo aprendido en HTML, CSS, JavaScript y manejo de API's. 
+
+NOTA: Debido a limitaciones relacionadas con el consumo de APIs externas desde el frontend, optamos por implementar un backend propio (con Node.js) que actúe como intermediario entre el frontend y la API externa.
 
 ---
 
@@ -8,7 +10,8 @@ Este es el proyecto final de Fundamentos Web. Se trata de un reproductor de mús
 
 - [x] Planificación del proyecto
 - [x] Desarrollo del frontend (HTML, CSS, JS)
-- [ ] Estilos y diseño responsive
+- [x] Estilos y diseño responsive
+- [ ] Desarrollo del backend (Node.js)
 - [ ] Funcionalidades del reproductor
 - [ ] Terminado
 
