@@ -1,14 +1,37 @@
-const musicBox = document.getElementById("music-box");
-const songsOverlay = document.getElementById("songs-overlay");
-const openSongsBtn = document.getElementById("show-songs-btn");
-const playerBox = document.getElementById("player-box");
-const closePlayer = document.getElementById("close-player");
+let musicBox, songsOverlay, openSongsBtn, playerBox, closePlayer;
 
+export function initUI() {
+    musicBox = document.getElementById("music-box");
+    songsOverlay = document.getElementById("songs-overlay");
+    openSongsBtn = document.getElementById("show-songs-btn");
+    playerBox = document.getElementById("player-box");
+    closePlayer = document.getElementById("close-player");
 
-window.addEventListener("resize", () => {
+    openSongsBtn.addEventListener('click', toggleSongsMenu);
+    songsOverlay.addEventListener('click', toggleSongsMenu);
+    closePlayer.addEventListener('click', () => {
+        playerBox.classList.add("hidden");
+    });
+
+    window.addEventListener("resize", sizeBasedBehavior);
+
+    sizeBasedBehavior();
+}
+
+export function toggleSongsMenu() {
+    musicBox.classList.toggle("hidden");
+    openSongsBtn.classList.toggle("hidden");
+    songsOverlay.classList.toggle("hidden");
+}
+
+export function togglePlayer() {
+    playerBox.classList.toggle("hidden");
+}
+
+function sizeBasedBehavior() {
     const width = window.innerWidth;
-    songsOverlay.classList.add("hidden")
-    
+    songsOverlay.classList.add("hidden");
+
     if (width <= 920 && width > 450) {
         closePlayer.classList.add("hidden");
         musicBox.classList.add("hidden");
@@ -27,24 +50,4 @@ window.addEventListener("resize", () => {
         musicBox.classList.remove("hidden");
         playerBox.classList.remove("hidden");
     }
-})
-export function toggleSongsMenu() {
-    musicBox.classList.toggle("hidden");
-    openSongsBtn.classList.toggle("hidden");
-    songsOverlay.classList.toggle("hidden");
 }
-export function togglePlayer() {
-    playerBox.classList.toggle("hidden");
-}
-
-openSongsBtn.addEventListener('click', () => {
-    toggleSongsMenu();
-})
-
-songsOverlay.addEventListener('click', () => {
-    toggleSongsMenu();
-})
-
-closePlayer.addEventListener('click', () => {
-    playerBox.classList.add("hidden");
-})

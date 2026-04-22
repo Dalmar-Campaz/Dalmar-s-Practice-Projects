@@ -28,6 +28,9 @@ body {
   background-color: #090a0b;
   color: white;
 }
+.preload{
+  visibility: hidden;
+}
 .hidden {
   display: none;
 }
