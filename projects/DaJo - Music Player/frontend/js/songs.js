@@ -9,7 +9,7 @@ window.addEventListener("DOMContentLoaded", () => {
 
     async function getSongs() {
         try {
-            const respuesta = await fetch("http://localhost:3000/songs");
+            const respuesta = await fetch("https://dajo-player.onrender.com");
             const data = await respuesta.json();
 
             return data;
