@@ -28,9 +28,32 @@ body {
   background-color: #090a0b;
   color: white;
 }
-.preload{
-  visibility: hidden;
+/*Pantalla de carga*/
+.loading{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #090a0b;
+  z-index: 999999999999;
 }
+.spinner {
+  width: 50px;
+  height: 50px;
+  border: 4px solid #252525;
+  border-top: 4px solid #752833;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin-bottom: 10px;
+}
+@keyframes spin {
+  to{
+    transform: rotate(360deg);
+  }
+}
+/**/
+
 .hidden {
   display: none;
 }
