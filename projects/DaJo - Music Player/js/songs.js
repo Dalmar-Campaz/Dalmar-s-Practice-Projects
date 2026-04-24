@@ -87,7 +87,7 @@ window.addEventListener("DOMContentLoaded", () => {
     })
 
     mostrarSongs();
-    const loadingScreen = document.getElementById("loading");
-    loadingScreen.style.display = "none";
-
+    setTimerout(() => {
+        document.getElementById("loading").style.display = "none";
+    }, 1500);
 });
