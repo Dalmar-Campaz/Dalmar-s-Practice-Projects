@@ -87,6 +87,7 @@ window.addEventListener("DOMContentLoaded", () => {
     })
 
     mostrarSongs();
-    document.body.classList.remove("preload");
+    const loadingScreen = document.getElementById("loading");
+    loadingScreen.style.display = "none";
 
 });
