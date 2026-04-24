@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <link rel="icon" href="assets/icons/favicon.png" type="image/png" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!--css links-->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/player-box.css" />
+    <link rel="stylesheet" href="css/music-box.css" />
+
+    <title>DaJo Player</title>
+  </head>
+  <body>
+    <!--pantalla de carga-->
+    <div id="loading" class="loading center flex-c">
+      <div class="spinner"></div>
+      <p>Loading...</p>
+    </div>
+    <h1><span style="color: #e93e55">DaJo</span> Player</h1>
+    
+    <!--width < 920px-->
+    <div class="center show-songs-btn" id="show-songs-btn">
+      <p>Canciones</p>
+      <i class="fa-solid fa-angle-right"></i>
+    </div>
+    <div class="songs-overlay hidden" id="songs-overlay"></div>
+
+    <div class="boxes-container center flex-r">
+      <!--apartado de la caja de canciones-->
+
+      <section class="music-box" id="music-box">
+        <div class="songs flex-c">
+          <h2>Canciones</h2>
+          <input
+            type="text"
+            placeholder="Buscar cancion"
+            id="buscador-canciones"
+          />
+          <div id="display-songs"></div>
+        </div>
+      </section>
+
+      <!--apartado de la caja de controles-->
+
+      <section class="player-box flex-c" id="player-box">
+        <i id="close-player" class="fa-solid fa-xmark center"></i>
+        <br>
+        <img class="default-cover" id="cover" src="assets/icons/favicon.png" />
+        <h2 id="title"></h2>
+        <span class="artist" id="artist"></span>
+        <input type="range" id="song-time" value="0" />
+        <div class="controls flex-r center">
+          <i class="fa-solid fa-shuffle"></i>
+          <i class="fa-solid fa-backward-step"></i>
+          <i class="fa-solid fa-play" id="pp"></i>
+          <i class="fa-solid fa-forward-step"></i>
+          <i class="fa-solid fa-volume-high"></i>
+        </div>
+      </section>
+    </div>
+    <footer>
+      <p>Code By Dalmar Campaz - David vidal &copy</p>
+    </footer>
+    <script type="module" src="js/sizeBasedBehavior.js"></script>
+    <script src="js/player.js"></script>
+    <script type="module" src="js/songs.js"></script>
+  </body>
+</html>
+<!-- <script>
+  const container = document.getElementById("display-songs");
+  container.innerHTML = "";
+
+  for (let i = 0; i < 20; i++) {
+    let cancion = `
+            <div class="flex-r song">
+              <img src="https://cdn-images.dzcdn.net/images/cover/ec3c8ed67427064c70f67e5815b74cef/56x56-000000-80-0-0.jpg" />
+              <span>Without Me</span>
+            </div>
+        `;
+
+    container.innerHTML += cancion;
+  }
+</script> -->
