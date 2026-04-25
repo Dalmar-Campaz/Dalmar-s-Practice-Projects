@@ -11,8 +11,8 @@
   max-width: 350px;
 }
 .cover {
-  width: 200px;
-  height: 200px;
+  width: 180px;
+  height: 180px;
   margin-bottom: 40px;
 }
 
@@ -31,29 +31,39 @@
   font-size: 20px;
   text-align: center;
 }
+.audio {
+  display: none;
+  width: 0;
+  height: 0;
+}
 #song-time {
   appearance: none;
   -webkit-appearance: none;
   width: 80%;
+  height: 6px;
   margin-bottom: 20px;
   background: linear-gradient(to right, #ff3b3b 0%, #252525 0%);
   border-radius: 50px;
+  transition: background 0.15s linear;
 }
 #song-time::-webkit-slider-thumb {
   -webkit-appearance: none;
-  width: 14px;
-  height: 14px;
+  /* width: 20px;
+  height: 20px;
   background: #ff3b3b;
   border-radius: 50%;
   cursor: pointer;
   transition: 0.2s;
+  border: 3px solid #ff3b3b; */
 }
-#song-time::-webkit-slider-thumb:hover {
+
+/* #song-time::-webkit-slider-thumb:hover {
   transform: scale(1.4);
-}
+} */
 .controls {
   margin-bottom: 20px;
   width: 70%;
+  height: 70px;
 }
 .controls i {
   display: flex;
@@ -81,7 +91,38 @@
   color: white;
   background: #e93e55;
 }
-#close-player{
+
+.volume-bar input {
+  height: 100px;
+  width: 4px;
+  appearance: none;
+  -webkit-appearance: none;
+  background: linear-gradient(to right, #ff3b3b 0%, #444 0%);
+  border-radius: 50px;
+}
+.volume-bar input::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 14px;
+  height: 14px;
+  background: #ff3b3b;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: 0.2s;
+}
+.volume-bar input::-webkit-slider-thumb:hover {
+  transform: scale(1.4);
+}
+.volume-bar {
+  position: fixed;
+  margin-bottom: 220px;
+  writing-mode: vertical-lr;
+  transform: rotate(180deg);
+  background-color: rgb(44, 44, 44);
+  width: 40px;
+  height: 140px;
+}
+
+#close-player {
   position: absolute;
   top: 15px;
   right: 5%;
@@ -91,13 +132,12 @@
 }
 @media (max-height: 660px) {
   .default-cover {
-    max-width: 300px;
+    max-width: 260px;
     min-width: 260px;
   }
   .cover {
     width: 150px;
     height: 150px;
-    margin-bottom: 30px;
   }
 }
 @media (max-width: 450px) {
@@ -111,9 +151,9 @@
     z-index: 3;
     gap: 10px;
   }
-  .cover{
-    width: 210px;
-    height: 210px;
+  .cover {
+    width: 150px;
+    height: 150px;
   }
 }
 @media (max-width: 920px) {

@@ -22,7 +22,7 @@
       <p>Loading...</p>
     </div>
     <h1><span style="color: #e93e55">DaJo</span> Player</h1>
-    
+
     <!--width < 920px-->
     <div class="center show-songs-btn" id="show-songs-btn">
       <p>Canciones</p>
@@ -38,8 +38,8 @@
           <h2>Canciones</h2>
           <input
             type="text"
-            placeholder="Buscar cancion"
-            id="buscador-canciones"
+            placeholder="Buscar cancion..."
+            id="search"
           />
           <div id="display-songs"></div>
         </div>
@@ -49,17 +49,25 @@
 
       <section class="player-box flex-c" id="player-box">
         <i id="close-player" class="fa-solid fa-xmark center"></i>
-        <br>
+        <br />
         <img class="default-cover" id="cover" src="assets/icons/favicon.png" />
         <h2 id="title"></h2>
         <span class="artist" id="artist"></span>
+        <audio src="" id="audio" class="audio"></audio>
         <input type="range" id="song-time" value="0" />
         <div class="controls flex-r center">
-          <i class="fa-solid fa-shuffle"></i>
-          <i class="fa-solid fa-backward-step"></i>
-          <i class="fa-solid fa-play" id="pp"></i>
-          <i class="fa-solid fa-forward-step"></i>
-          <i class="fa-solid fa-volume-high"></i>
+          <i class="fa-solid fa-shuffle" id="shuffle"></i>
+          <i class="fa-solid fa-backward-step" id="backward"></i>
+          <i class="fa-solid fa-play" id="play-pause"></i>
+          <i class="fa-solid fa-forward-step" id="forward"></i>
+
+          <div class="flex-c center">
+            <div class="volume-bar center hidden" id="volume-bar-box">
+              <input type="range" value="30" min="0" max="1" step="0.01" id="volume-bar" />
+            </div>
+            <i class="fa-solid fa-volume-high" id="volume-btn"></i>
+          </div>
+
         </div>
       </section>
     </div>
@@ -67,7 +75,6 @@
       <p>Code By Dalmar Campaz - David vidal &copy</p>
     </footer>
     <script type="module" src="js/sizeBasedBehavior.js"></script>
-    <script src="js/player.js"></script>
     <script type="module" src="js/songs.js"></script>
   </body>
 </html>

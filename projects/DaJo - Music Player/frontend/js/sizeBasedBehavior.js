@@ -30,6 +30,9 @@ export function togglePlayer() {
 
 function sizeBasedBehavior() {
     const width = window.innerWidth;
+    const height = window.innerHeight
+
+    document.getElementById("volume-bar-box").classList.add("hidden");
     songsOverlay.classList.add("hidden");
 
     if (width <= 920 && width > 450) {
