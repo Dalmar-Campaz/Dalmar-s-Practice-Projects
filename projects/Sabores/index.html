@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/mian.css" />
+    <link rel="stylesheet" href="css/cartas.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+    <title>Recetas App</title>
+  </head>
+  <body>
+    <header>
+      <h1>Sabores</h1>
+      <div class="sub-div">
+        <div class="subtitle">
+          <h2>Descubre recetas <span>deliciosas</span></h2>
+          <p>
+            Busca por nombre o ingrediente y encuentra tu proxima receta
+            favorita
+          </p>
+        </div>
+        <input
+          type="text"
+          id="buscador"
+          class="buscador"
+          placeholder="Buscar receta o ingrediente..."
+        />
+      </div>
+    </header>
+    <main>
+      <h2>Recetas para ti</h2>
+      <div class="recetas-contenedor" id="recetas-contenedor">
+        <div class="cargando">
+            <div class="rueda"></div>
+        </div>
+      </div>
+    </main>
+    <script src="js/main.js"></script>
+  </body>
+</html>

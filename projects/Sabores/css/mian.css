@@ -1,0 +1,124 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Pacifico&display=swap");
+
+:root {
+  --color-primary: #ff6b2c;
+  --color-primary-hover: #e85a1f;
+
+  --color-bg: #ffffff;
+  --color-bg-alt: #f5f5f5;
+  --color-border: #eaeaea;
+
+  --color-bg-dark: #121212;
+  --color-bg-dark-alt: #1e1e1e;
+  --color-bg-dark-soft: #2a2a2a;
+
+  --color-text: #222222;
+  --color-text-secondary: #666666;
+  --color-text-dark: #e0e0e0;
+
+  --color-success: #4caf50;
+  --color-warning: #ffa726;
+  --color-danger: #ef5350;
+
+  --color-shadow: rgba(0, 0, 0, 0.1);
+  --color-overlay: rgba(0, 0, 0, 0.5);
+}
+* {
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  height: 100%;
+  background-color: var(--color-bg-dark);
+  font-family: sans-serif;
+  color: var(--color-text-dark);
+  align-items: center;
+  row-gap: 40px;
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+  column-gap: 10%;
+  align-items: center;
+  justify-content: space-around;
+  width: 100%;
+}
+h1 {
+  font-family: "pacifico", cursive;
+  font-style: normal;
+  font-size: 80px;
+  letter-spacing: 4px;
+  font-weight: 400;
+  text-align: center;
+  margin: 0;
+  width: 100%;
+  color: var(--color-primary);
+}
+.sub-div {
+  width: 90%;
+  display: flex;
+  flex-direction: row;
+  column-gap: 15%;
+  align-items: center;
+}
+.subtitle {
+  text-align: left;
+  width: 400px;
+  white-space: wrap;
+}
+.subtitle p {
+  font-size: 16px;
+  color: var(--color-text-dark);
+}
+header h2 {
+  font-size: 40px;
+  margin: 0;
+}
+header h2 span {
+  color: var(--color-primary);
+}
+.buscador {
+  width: 50%;
+  height: 60px;
+  font-size: 18px;
+  border-radius: 10px;
+  padding: 0 15px;
+  border: none;
+  background-color: var(--color-bg-dark-soft);
+  color: var(--color-text-dark);
+}
+
+main {
+  width: 90%;
+}
+main h2 {
+  position: relative;
+  font-size: 25px;
+  margin: 40px 0;
+}
+main h2::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -10px;
+  height: 4px;
+  width: 40px;
+  background-color: var(--color-primary-hover);
+  border-radius: 10px;
+}
+
+.recetas-contenedor {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+}
+.cargando {
+  background-color: var(--color-bg-dark-alt);
+  height: 100%;
+  width: 100%;
+  z-index: 1000;
+}

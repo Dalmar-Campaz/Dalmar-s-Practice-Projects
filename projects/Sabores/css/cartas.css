@@ -1,0 +1,71 @@
+:root {
+  --color-primary: #ff6b2c;
+  --color-primary-hover: #e85a1f;
+
+  --color-bg-dark: #121212;
+  --color-bg-dark-alt: #1e1e1e;
+  --color-bg-dark-soft: #2a2a2a;
+
+  --color-text: #222222;
+  --color-text-secondary: #666666;
+  --color-text-dark: #e0e0e0;
+
+  --color-shadow: rgba(0, 0, 0, 0.1);
+  --color-overlay: rgba(0, 0, 0, 0.5);
+}
+
+.receta-carta {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 350px;
+  border-radius: 10px;
+  border: 3px solid var(--color-bg-dark-soft);
+  background-color: var(--color-bg-dark-alt);
+  padding: 10px;
+}
+.receta-carta img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 10px;
+}
+.receta-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 0 10px;
+  width: 100%;
+  height: 100%;
+}
+.receta-info h3 {
+  margin: 25px 0 10px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.receta-info span {
+  display: flex;
+  align-items: center;
+  column-gap: 3px;
+  margin-bottom: 5px;
+  color: var(--color-text-secondary);
+}
+
+.receta-info button {
+  margin: 10px auto;
+  background-color: var(--color-primary);
+  width: 80%;
+  padding: 10px;
+  border-radius: 10px;
+  border: none;
+  color: var(--color-text-dark);
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.receta-info button:hover {
+  cursor: pointer;
+  background-color: var(--color-primary-hover);
+}
