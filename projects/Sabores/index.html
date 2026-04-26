@@ -15,28 +15,31 @@
     <header>
       <h1>Sabores</h1>
       <div class="sub-div">
-        <div class="subtitle">
+        <div class="subtitle" id="subtitle">
           <h2>Descubre recetas <span>deliciosas</span></h2>
           <p>
             Busca por nombre o ingrediente y encuentra tu proxima receta
             favorita
           </p>
         </div>
-        <input
-          type="text"
-          id="buscador"
-          class="buscador"
-          placeholder="Buscar receta o ingrediente..."
-        />
+        <form id="form-busqueda">
+          <input
+            type="text"
+            id="buscador"
+            class="buscador"
+            placeholder="Buscar receta o ingrediente..."
+          />
+        </form>
       </div>
     </header>
     <main>
       <h2>Recetas para ti</h2>
       <div class="recetas-contenedor" id="recetas-contenedor">
-        <div class="cargando">
-            <div class="rueda"></div>
-        </div>
+        <div class="cargando"></div>
       </div>
+      <button class="mostrar-mas hidden" id="mostrar-mas">
+        Otras recetas...
+      </button>
     </main>
     <script src="js/main.js"></script>
   </body>
