@@ -11,8 +11,8 @@ NOTA: Debido a limitaciones relacionadas con el consumo de APIs externas desde e
 - [x] Planificación del proyecto
 - [x] Desarrollo del frontend (HTML, CSS, JS)
 - [x] Estilos y diseño responsive
-- [ ] Desarrollo del backend (Node.js)
-- [ ] Funcionalidades del reproductor
+- [x] Desarrollo del backend (Node.js)
+- [x] Funcionalidades del reproductor
 - [ ] Terminado
 
 ---
