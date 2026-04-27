@@ -4,12 +4,13 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="css/mian.css" />
+    <link rel="stylesheet" href="css/instrucciones.css" />
     <link rel="stylesheet" href="css/cartas.css" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
     />
-    <title>Recetas App</title>
+    <title>Sabores</title>
   </head>
   <body>
     <header>
@@ -32,6 +33,11 @@
         </form>
       </div>
     </header>
+
+    <div class="instrucciones-overlay hidden" id="instrucciones-overlay"></div>
+    <article class="contenedor-instrucciones hidden" id="instrucciones">
+    </article>
+
     <main>
       <h2>Recetas para ti</h2>
       <div class="recetas-contenedor" id="recetas-contenedor">
@@ -41,6 +47,7 @@
         Otras recetas...
       </button>
     </main>
+
     <script src="js/main.js"></script>
   </body>
 </html>

@@ -2,7 +2,11 @@
 const container = document.getElementById("recetas-contenedor");
 const mostrarMasBtn = document.getElementById("mostrar-mas");
 const buscador = document.getElementById("buscador");
-const form = document.getElementById("form-busqueda")
+const form = document.getElementById("form-busqueda");
+
+const cajaInstrucciones = document.getElementById("instrucciones");
+const cerrarInstruccionesBtn = document.getElementById("cerrar-btn");
+const overlay = document.getElementById("instrucciones-overlay");
 
 async function buscarReceta(element) {
     const url1 = `https://www.themealdb.com/api/json/v1/1/search.php?s=${element}`
@@ -19,8 +23,6 @@ async function buscarReceta(element) {
     } catch (error) {
         console.error("Error al consumir la API", error)
     }
-
-
 }
 
 async function getRecetaRandom() {
@@ -39,7 +41,7 @@ async function mostrarRecetasRandom() {
     for (let i = 0; i < 8; i++) {
         const receta = await getRecetaRandom();
         paraTi += `
-                <article class="receta-carta">
+            <article class="receta-carta">
             <img src= "${receta.strMealThumb}"/>
             <div class="receta-info">
                 <div>
@@ -47,12 +49,20 @@ async function mostrarRecetasRandom() {
                 <span><i class="fa-solid fa-globe"></i>${receta.strArea}</span>
                 <span><i class="fa-solid fa-layer-group"></i>${receta.strCategory}</span>
                 </div>
-                <button>Ver Receta</button>
+                <button class="ver-receta" data-id="${receta.idMeal}">Ver Receta</button>
             </div>
             </article>`;
     }
     container.innerHTML = paraTi;
     mostrarMasBtn.classList.remove("hidden");
+}
+
+async function verReceta(id) {
+    const res = await fetch(`https://www.themealdb.com/api/json/v1/1/lookup.php?i=${id}`);
+    const data = await res.json();
+
+    const receta = data.meals[0];
+    return receta;
 }
 
 function cargandoRecetas() {
@@ -82,7 +92,7 @@ form.addEventListener('submit', async (e) => {
 
     recetas.forEach(receta => {
         resultadosBusqueda += `
-                <article class="receta-carta" id="${receta.idMeal}">
+                <article class="receta-carta">
             <img src= "${receta.strMealThumb}"/>
             <div class="receta-info">
                 <div>
@@ -90,16 +100,56 @@ form.addEventListener('submit', async (e) => {
                 <span><i class="fa-solid fa-globe"></i>${receta.strArea}</span>
                 <span><i class="fa-solid fa-layer-group"></i>${receta.strCategory}</span>
                 </div>
-                <button>Ver Receta</button>
+                <button class="ver-receta" data-id="${receta.idMeal}">Ver Receta</button>
             </div>
             </article>`;
     });
     container.innerHTML = resultadosBusqueda;
 })
 
+container.addEventListener('click', async (e) => {
+    if (!e.target.classList.contains("ver-receta")) return;
+
+    const id = e.target.dataset.id;
+    const receta = await verReceta(id);
+
+    let info = `
+                <img src="${receta.strMealThumb}"/>
+                <h2>${receta.strMeal}</h2>
+                <h3>Ingredientes:</h3><ul>`;
+
+    for (let i = 1; i <= 20; i++) {
+
+        const ingrediente = receta[`strIngredient${i}`];
+        const medida = receta[`strMeasure${i}`];
+
+        if (ingrediente && ingrediente.trim() !== "") {
+            info += `<li>${medida} ${ingrediente}</li>`;
+        }
+    }
+    info += `
+            </ul><h3>Instructions</h3>
+            <p>${receta.strInstructions}</p>
+            <button class="cerrar-btn">Cerrar</button>`;
+
+    cajaInstrucciones.innerHTML = info;
+    cajaInstrucciones.classList.remove("hidden");
+    overlay.classList.remove("hidden");
+});
+
+cajaInstrucciones.addEventListener('click', (e) => {
+    if (!e.target.classList.contains("cerrar-btn")) return;
+    cajaInstrucciones.classList.add("hidden");
+    overlay.classList.add("hidden");
+})
+
+overlay.addEventListener('click', () => {
+    cajaInstrucciones.classList.add("hidden");
+    overlay.classList.add("hidden");
+})
+
 mostrarMasBtn.addEventListener('click', () => {
     cargandoRecetas();
     mostrarRecetasRandom();
 })
-
 mostrarRecetasRandom();
