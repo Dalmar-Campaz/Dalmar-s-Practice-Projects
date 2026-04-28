@@ -120,7 +120,7 @@ main h2::after {
   background-color: var(--color-primary-hover);
   border-radius: 10px;
 }
-.mostrar-mas {
+.boton {
   margin: 20px auto;
   background-color: var(--color-primary);
   width: 50%;
@@ -132,7 +132,7 @@ main h2::after {
   font-size: 16px;
   font-weight: 600;
 }
-.mostrar-mas:hover {
+.boton:hover {
   background-color: var(--color-primary-hover);
   cursor: pointer;
 }
@@ -161,5 +161,9 @@ main h2::after {
 @media (max-width: 700px) {
   #subtitle {
     display: none;
+  }
+  form{
+    width: 90%;
+    margin: 0 auto;
   }
 }

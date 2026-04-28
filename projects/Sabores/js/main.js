@@ -38,9 +38,10 @@ async function getRecetaRandom() {
 
 async function mostrarRecetasRandom() {
     let paraTi = "";
-    for (let i = 0; i < 8; i++) {
-        const receta = await getRecetaRandom();
-        paraTi += `
+    try {
+        for (let i = 0; i < 8; i++) {
+            const receta = await getRecetaRandom();
+            paraTi += `
             <article class="receta-carta">
             <img src= "${receta.strMealThumb}"/>
             <div class="receta-info">
@@ -52,9 +53,15 @@ async function mostrarRecetasRandom() {
                 <button class="ver-receta" data-id="${receta.idMeal}">Ver Receta</button>
             </div>
             </article>`;
+        }
+        container.innerHTML = paraTi;
+        mostrarMasBtn.classList.remove("hidden");
+    } catch (error) {
+        setTimeout(() => {
+            container.innerHTML = `<p>Error al cargar las recetas, revisa tu conexion a internet...</p>`
+            intentarCargar.classList.remove("hidden");
+        }, 2000)
     }
-    container.innerHTML = paraTi;
-    mostrarMasBtn.classList.remove("hidden");
 }
 
 async function verReceta(id) {
@@ -70,6 +77,7 @@ function cargandoRecetas() {
         <div class="cargando">
         </div>`;
     mostrarMasBtn.classList.add("hidden");
+    intentarCargar.classList.add("hidden")
 }
 
 form.addEventListener('submit', async (e) => {
@@ -152,4 +160,12 @@ mostrarMasBtn.addEventListener('click', () => {
     cargandoRecetas();
     mostrarRecetasRandom();
 })
+
+const intentarCargar = document.getElementById("intentar-cargar");
+
+intentarCargar.addEventListener('click', () => {
+    cargandoRecetas()
+    mostrarRecetasRandom()
+})
+
 mostrarRecetasRandom();
