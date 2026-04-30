@@ -14,6 +14,8 @@
 
   --color-night-bg: linear-gradient(135deg, #0d1b2a, #1b263b);
   --default-background: linear-gradient(var(--color-bg-secondary), var(--color-bg-primary));
+  --color-cloudy-bg: linear-gradient(135deg, #4b6e81, #1f3b49);
+  --color-rainy-bg: linear-gradient(135deg, #1a2d45, #012138);
 }
 * {
   box-sizing: border-box;

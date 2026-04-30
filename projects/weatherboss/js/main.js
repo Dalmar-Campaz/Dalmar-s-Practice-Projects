@@ -61,7 +61,6 @@ async function setInfoHoy() {
     let estado;
     if (!esNoche) {
         estado = tipo == "neutral" ? "Soleado" : tipo;
-        document.body.style.background = `var(--default-background)`;
         iconClima(tipo);
     } else {
         estado = "Noche"
@@ -99,17 +98,17 @@ async function setInfoHoy() {
         return;
     }
     switch (tipo) {
-        case "Soleado":
-            climaBox.style.backgroundImage = `url(assets/Soleado.png)`;
-            break
         case "Nublado":
             climaBox.style.backgroundImage = `url(assets/Nublado.png)`;
+            document.body.style.background = `var(--color-cloudy-bg)`;
             break
         case "Lluvioso":
-            climaBox.style.backgroundImage = `url(assets/Lluvioso.png)`
+            climaBox.style.backgroundImage = `url(assets/Lluvioso.png)`;
+            document.body.style.background = `var(--color-rainy-bg)`;
             break
         default:
             climaBox.style.backgroundImage = `url(assets/Soleado.png)`;
+            document.body.style.background = `var(--default-background)`;
     }
 }
 
@@ -133,7 +132,7 @@ async function setInfoFutura() {
         let tempMax = -Infinity;
         let tempMin = Infinity;
         let humedadTotal = 0;
-        const nombreDia = (new Date(bloques[0].dt_txt)).toLocaleDateString("es-ES", {weekday: "long"});
+        const nombreDia = (new Date(bloques[0].dt_txt)).toLocaleDateString("es-ES", { weekday: "long" });
 
         bloques.forEach(b => {
             humedadTotal += b.main.humidity;
@@ -142,11 +141,11 @@ async function setInfoFutura() {
         });
 
         const humedad = Math.round(humedadTotal / bloques.length);
-        const clima = bloques[0].weather[0].main; 
+        const clima = bloques[0].weather[0].main;
         const icon = iconClima(getTipoClima(clima));
-            ClimaBoxFuturo.innerHTML += `
+        ClimaBoxFuturo.innerHTML += `
         <div class="carta">
-            <p>${index === 0? "mañana" : nombreDia}</p>
+            <p>${index === 0 ? "mañana" : nombreDia}</p>
             <i class="fa-solid ${icon} clima"></i>
             <div class="card-txt">
                 <span>${Math.round(tempMax)}°</span>
