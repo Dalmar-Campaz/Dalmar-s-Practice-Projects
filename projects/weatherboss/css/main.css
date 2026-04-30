@@ -1,0 +1,106 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Pacifico&display=swap");
+
+:root {
+  /* ===== Base (modo oscuro moderno) ===== */
+  --color-bg-primary: #0b1c2c;
+  --color-bg-secondary: #132f4c;
+  --color-surface: #1e3a5f;
+  --color-card: rgba(255, 255, 255, 0.08);
+
+  /* ===== Texto ===== */
+  --color-text-primary: #ffffff;
+  --color-text-secondary: #c9d6e2;
+  --color-text-muted: #8fa3b8;
+
+  --color-night-bg: linear-gradient(135deg, #0d1b2a, #1b263b);
+  --default-background: linear-gradient(var(--color-bg-secondary), var(--color-bg-primary));
+}
+* {
+  box-sizing: border-box;
+}
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: "Outfit", sans-serif;
+  color: white;
+  row-gap: 20px;
+  margin: 0;
+  width: 100%;
+  height: 100vh;
+}
+header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+h1 {
+  margin: 10px 0 0;
+  font-size: 40px;
+}
+.ciudad {
+  margin: 0;
+  font-size: 40px;
+}
+p {
+  margin: 0px;
+}
+.today-date {
+  letter-spacing: 2px;
+}
+.temperatura {
+  margin: 0;
+  font-size: 80px;
+  font-weight: 500;
+}
+.weather-icon {
+  width: 80px;
+  height: 80px;
+}
+.clima-div {
+  font-size: 24px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  column-gap: 10px;
+}
+.sensacion-termica {
+  font-size: 24px;
+}
+.pronosticos-hoy {
+  display: flex;
+  flex-direction: column;
+  width: 95%;
+  height: 400px;
+  padding: 20px 60px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  justify-content: space-between;
+  background-size: cover;
+}
+.pronosticos-futuro {
+    display: grid;
+    width: 90%;
+    grid-template-columns: repeat(5, minmax(150px, 1fr));
+    grid-template-rows: repeat(1, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.carta {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    background-color: rgba(255, 255, 255, 0.08);
+    border-radius: 10px;
+    font-size: 16px;
+}
+.carta span {
+    margin: 0 10px;
+}
+.carta .clima {
+    font-size: 60px;
+}
+.card-txt {
+  color: var(--color-text-secondary);
+}
