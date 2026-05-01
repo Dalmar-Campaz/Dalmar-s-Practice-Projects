@@ -64,7 +64,7 @@ async function setInfoHoy() {
         iconClima(tipo);
     } else {
         estado = "Noche"
-        iconClima = "fa-moon"
+        icon = "fa-moon"
         document.body.style.background = `var(--color-night-bg)`;
     }
 
@@ -142,7 +142,8 @@ async function setInfoFutura() {
 
         const humedad = Math.round(humedadTotal / bloques.length);
         const clima = bloques[0].weather[0].main;
-        const icon = iconClima(getTipoClima(clima));
+        const tipo = getTipoClima(clima)
+        const icon = iconClima(tipo);
         ClimaBoxFuturo.innerHTML += `
         <div class="carta">
             <p>${index === 0 ? "mañana" : nombreDia}</p>
