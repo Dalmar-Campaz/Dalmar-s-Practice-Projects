@@ -4,13 +4,8 @@
   /* ===== Base (modo oscuro moderno) ===== */
   --color-bg-primary: #0b1c2c;
   --color-bg-secondary: #132f4c;
-  --color-surface: #1e3a5f;
-  --color-card: rgba(255, 255, 255, 0.08);
 
-  /* ===== Texto ===== */
-  --color-text-primary: #ffffff;
   --color-text-secondary: #c9d6e2;
-  --color-text-muted: #8fa3b8;
 
   --color-night-bg: linear-gradient(135deg, #0d1b2a, #1b263b);
   --default-background: linear-gradient(var(--color-bg-secondary), var(--color-bg-primary));
@@ -105,4 +100,10 @@ p {
 }
 .card-txt {
   color: var(--color-text-secondary);
+}
+.fa-cloud-rain {
+  color: lightblue;
+}
+.fa-sun {
+  color: lightgoldenrodyellow;
 }
