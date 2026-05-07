@@ -1,5 +1,5 @@
 const apiKey = "38e6341398624cca4db0e881e99fea6b";
-const ciudad = "cali";
+const ciudad = "Cali,CO";
 const climaBox = document.getElementById("pronosticos-hoy");
 const ClimaBoxFuturo = document.getElementById("pronosticos-futuro")
 
@@ -141,7 +141,7 @@ async function setInfoFutura() {
         });
 
         const humedad = Math.round(humedadTotal / bloques.length);
-        const clima = bloques[0].weather[0].main;
+        const clima = bloques[4].weather[0].main;
         const tipo = getTipoClima(clima)
         const icon = iconClima(tipo);
         ClimaBoxFuturo.innerHTML += `
