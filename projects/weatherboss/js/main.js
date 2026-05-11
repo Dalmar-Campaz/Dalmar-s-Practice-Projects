@@ -141,7 +141,7 @@ async function setInfoFutura() {
         });
 
         const humedad = Math.round(humedadTotal / bloques.length);
-        const clima = bloques[0].weather[0].main;
+        const clima = bloques[Math.round(bloques.length/2)].weather[0].main;
         const tipo = getTipoClima(clima)
         const icon = iconClima(tipo);
         ClimaBoxFuturo.innerHTML += `
