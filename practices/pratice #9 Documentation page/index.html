@@ -1,0 +1,173 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Documentacion tecnica</title>
+  </head>
+
+  <body>
+    <nav id="navbar">
+      <header>Git y Control de Versiones</header>
+      <ul>
+        <li>
+          <a class="nav-link" href="#Introduccion_a_Git">Introduccion a Git</a>
+        </li>
+        <li>
+          <a class="nav-link" href="#Configuracion_e_Inicializacion"
+            >Configuracion e inicializacion</a
+          >
+        </li>
+        <li>
+          <a class="nav-link" href="#Flujo_de_Trabajo_Basicos"
+            >Flujo de trabajo basicos</a
+          >
+        </li>
+        <li><a class="nav-link" href="#Manejo_de_Ramas">Manejo de ramas</a></li>
+        <li>
+          <a class="nav-link" href="#Repositorios_Remotos"
+            >Repositorios remotos</a
+          >
+        </li>
+      </ul>
+    </nav>
+    <main id="main-doc">
+      <section class="main-section" id="Introduccion_a_Git">
+        <header>Introduccion a Git</header>
+        <article>
+          <p>
+            Git es un sistema de control de versiones distribuido diseñado para
+            rastrear cambios en el código fuente durante el desarrollo de
+            software. A diferencia de los sistemas centralizados, cada
+            directorio de Git en cada computadora es un repositorio hecho y
+            derecho con un historial completo y capacidades de seguimiento de
+            revisión independientes de la red o de un servidor central.
+          </p>
+          <code>git --version</code>
+        </article>
+      </section>
+      <section class="main-section" id="Configuracion_e_Inicializacion">
+        <header>Configuracion e Inicializacion</header>
+        <article>
+          <p>
+            Antes de comenzar a rastrear archivos, debes configurar tu identidad
+            de usuario global en Git. Esto asegura que todos tus commits queden
+            atribuidos correctamente con tu nombre y correo electrónico.
+          </p>
+          <ul>
+            <li>
+              <strong>Configurar usuario:</strong>
+              <code>git config --global user.name "Tu Nombre"</code>
+            </li>
+            <li>
+              <strong>Configurar email:</strong>
+              <code>git config --global user.email "tu@email.com"</code>
+            </li>
+          </ul>
+          <p>Para iniciar un repositorio local en una carpeta existente:</p>
+          <code>git init</code>
+          <p>Si deseas descargar un proyecto remoto desde GitHub o GitLab:</p>
+          <code>git clone https://github.com/usuario/repositorio.git</code>
+        </article>
+      </section>
+      <section class="main-section" id="Flujo_de_Trabajo_Basicos">
+        <header>Flujo de Trabajo Basicos</header>
+        <article>
+          <p>
+            El flujo de trabajo en Git consta de tres estados principales: el
+            directorio de trabajo (Working Directory), el área de preparación
+            (Staging Area) y el repositorio (Repository).
+          </p>
+          <ul>
+            <li>Modificas tus archivos en el directorio de trabajo.</li>
+            <li>
+              Preparas los archivos agregando capturas de sus cambios al área de
+              preparación.
+            </li>
+            <li>
+              Confirmas los cambios (commit), lo que toma los archivos tal como
+              están en el área de preparación y almacena esa captura de manera
+              permanente en el directorio de Git.
+            </li>
+          </ul>
+          <code
+            ># Ver el estado de los archivos <br />
+            git status
+          </code>
+          <code
+            ># Agregar un archivo al Staging Area<br />
+            git add index.html
+          </code>
+          <code
+            ># Agregar todos los archivos modificados<br />
+            git add .
+          </code>
+          <code
+            ># Guardar los cambios con un mensaje descriptivo<br />
+            git commit -m "Agregar estructura HTML inicial"
+          </code>
+        </article>
+      </section>
+      <section class="main-section" id="Manejo_de_Ramas">
+        <header>Manejo de Ramas</header>
+        <article>
+          <p>
+            Las ramas te permiten separar tu trabajo del hilo principal de
+            desarrollo (usualmente llamado <code>main</code> o
+            <code>master</code>). Puedes crear una rama para trabajar en una
+            nueva funcionalidad o corregir un error sin afectar el código
+            estable.
+          </p>
+          <ul>
+            <li>Listar ramas locales: <code>git branch</code></li>
+            <li>Crear una nueva rama: <code>git branch nueva-feature</code></li>
+            <li>
+              Cambiar a la nueva rama:
+              <code>git checkout nueva-feature / git switch nueva-feature</code>
+            </li>
+            <li>
+              Crear y cambiar en un solo paso:
+              <code>git checkout -b nueva-feature</code>
+            </li>
+          </ul>
+          <p>
+            Para fusionar los cambios de tu rama secundaria de vuelta a la rama
+            principal:
+          </p>
+          <code
+            >git checkout main <br />
+            git merge nueva-feature
+          </code>
+        </article>
+      </section>
+      <section class="main-section" id="Repositorios_Remotos">
+        <header>Repositorios Remotos</header>
+        <article>
+          <p>
+            Para colaborar con otros desarrolladores o respaldar tu código en la
+            nube, debes sincronizar tu repositorio local con un repositorio
+            remoto.
+          </p>
+          <ul>
+            <li>
+              Vincular un repositorio remoto:
+              <code
+                >git remote add origin
+                https://github.com/usuario/repositorio.git</code
+              >
+            </li>
+            <li>
+              <p>Subir cambios locales al servidor remoto:</p>
+              <code>git push -u origin main</code>
+            </li>
+            <li>
+              <p>Descargar e integrar los cambios más recientes del servidor:</p>
+              <code>git pull origin main</code>
+            </li>
+          </ul>
+        </article>
+      </section>
+    </main>
+  </body>
+</html>
